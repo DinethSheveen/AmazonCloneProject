@@ -27,11 +27,20 @@ const products = [
             count : 56
         },
         priceInCents : 799
+    },
+    {
+        productImage : "black-2-slot-toaster.jpg",
+        productName : "2 Slot Black Toaster",
+        ratings : {
+            stars : 5,
+            count : 2197
+        },
+        priceInCents : 1899
     }
 ]
 
 products.forEach((product)=>{
-    let htmlElement = `
+    let productElement = `
         <div class="product-container">
             <div class="product-image-container">
                 <img class="product-image"
@@ -44,14 +53,14 @@ products.forEach((product)=>{
 
             <div class="product-rating-container">
                 <img class="product-rating-stars"
-                src="images/ratings/rating-45.png">
+                src="images/ratings/rating-${product.ratings.stars*10}.png">
                 <div class="product-rating-count link-primary">
                 87
                 </div>
             </div>
 
             <div class="product-price">
-                ${(product.priceInCents/100).toFixed(2)}
+                &pound;${(product.priceInCents/100).toFixed(2)}
             </div>
 
             <div class="product-quantity-container">
@@ -82,5 +91,5 @@ products.forEach((product)=>{
         </div>
     `
 
-    grid.innerHTML += htmlElement
+    grid.innerHTML += productElement
 })
