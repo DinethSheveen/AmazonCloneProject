@@ -83,19 +83,20 @@ addBtn.forEach((product)=>{
                 productId : productId,
                 quantity : 1
             })
-        }    
-
-        let cartCount = 0;
-
-        cartProducts.forEach((product)=>{
-            cartCount += product.quantity
-        })
-
-        cartElement.innerHTML = cartCount
-
-        console.log(cartProducts);      
+        }
+        updateCartQuantity()         
     })    
 })
+
+function updateCartQuantity(){
+    let cartCount = 0;
+
+    cartProducts.forEach((product)=>{
+        cartCount += product.quantity
+    })
+
+    cartElement.innerHTML = cartCount
+}
 
 
 
