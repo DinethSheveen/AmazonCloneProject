@@ -1,3 +1,6 @@
+import { cartProducts } from "../data/cart.js"
+import { products } from "../data/products.js"
+
 const productElement = document.querySelector(".products-grid")
 const cartElement = document.querySelector(".cart-quantity")
 

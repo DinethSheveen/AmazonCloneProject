@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     productImage: "images/products/athletic-cotton-socks-6-pairs.jpg",

@@ -1,1 +1,1 @@
-let cartProducts = []
+export let cartProducts = []
