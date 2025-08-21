@@ -59,34 +59,40 @@ products.forEach((product)=>{
     `
 })
 
+function addToCart(id){
+    // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
+    let existingProduct;
+
+    //CHECKING WHETHER THE PRODUCT ALREADY EXISTS IN THE CART
+    cartProducts.forEach((product)=>{
+        if(id === product.productId){
+            existingProduct = product
+        }
+    })
+
+    //IF PRODUCT ALREADY EXISTS, INCREASING THE QUANTITY
+    if(existingProduct){
+        existingProduct.quantity +=1;
+    }
+    else{
+        cartProducts.push({
+            productId : id,
+            quantity : 1
+        })
+    }
+}
+
 //LOCATING THE ADD TO CART BUTTON
 const addBtn = document.querySelectorAll(".add-to-cart-button");
 
 //ADDING PRODUCTS TO THE CART ON BUTTON CLICK
 addBtn.forEach((product)=>{
     product.addEventListener("click",()=>{
-        const productId = product.dataset;
+        const productId = product.dataset.productId;
 
-        // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
-        let productAlreadyExists;
-
-        //CHECKING WHETHER THE PRODUCT ALREADY EXISTS IN THE CART
-        cartProducts.forEach((product)=>{
-            if(productId === product.productId){
-                productAlreadyExists = product
-            }
-        })
-
-        //IF PRODUCT ALREADY EXISTS, INCREASING THE QUANTITY
-        if(productAlreadyExists){
-            productAlreadyExists.quantity +=1;
-        }
-        else{
-            cartProducts.push({
-                productId : productId,
-                quantity : 1
-            })
-        }
+        console.log(cartProducts);
+        
+        addToCart(productId)
         updateCartQuantity()         
     })    
 })
