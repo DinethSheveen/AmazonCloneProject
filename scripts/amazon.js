@@ -63,9 +63,24 @@ addBtn.forEach((product)=>{
     product.addEventListener("click",()=>{
         const productName = product.dataset.productName;
 
-        cartProducts.push({
-            productName : productName
+        let productAlreadyExists;
+
+        cartProducts.forEach((product)=>{
+            if(productName === product.productName){
+                productAlreadyExists = product
+            }
         })
+
+        if(productAlreadyExists){
+            productAlreadyExists.quantity +=1;
+        }
+        else{
+            cartProducts.push({
+                productName : productName,
+                quantity : 1
+            })
+        }
+        
         console.log(cartProducts);
         
     })
