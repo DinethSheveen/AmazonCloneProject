@@ -1,4 +1,5 @@
 const productElement = document.querySelector(".products-grid")
+const cartElement = document.querySelector(".cart-quantity")
 
 //GENERATING THE HTML
 products.forEach((product)=>{
@@ -62,8 +63,6 @@ const addBtn = document.querySelectorAll(".add-to-cart-button");
 addBtn.forEach((product)=>{
     product.addEventListener("click",()=>{
         const productId = product.dataset;
-        console.log(productId);
-        
 
         // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
         let productAlreadyExists;
@@ -85,9 +84,17 @@ addBtn.forEach((product)=>{
                 quantity : 1
             })
         }    
-        console.log(cartProducts);
-            
-    })
+
+        let cartCount = 0;
+
+        cartProducts.forEach((product)=>{
+            cartCount += product.quantity
+        })
+
+        cartElement.innerHTML = cartCount
+
+        console.log(cartProducts);      
+    })    
 })
 
 
