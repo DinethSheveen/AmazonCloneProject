@@ -1,6 +1,6 @@
 const productElement = document.querySelector(".products-grid")
 
-
+//GENERATING THE HTML
 products.forEach((product)=>{
     productElement.innerHTML += `
         <div class="product-container">
@@ -48,41 +48,45 @@ products.forEach((product)=>{
             </div>
 
             <button class="add-to-cart-button button-primary"
-            data-product-name = "${product.productName}">
+            data-product-id = "${product.productId}">
                 Add to Cart
             </button>
         </div>
     `
 })
 
+//LOCATING THE ADD TO CART BUTTON
 const addBtn = document.querySelectorAll(".add-to-cart-button");
 
-
-
+//ADDING PRODUCTS TO THE CART ON BUTTON CLICK
 addBtn.forEach((product)=>{
     product.addEventListener("click",()=>{
-        const productName = product.dataset.productName;
+        const productId = product.dataset;
+        console.log(productId);
+        
 
+        // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
         let productAlreadyExists;
 
+        //CHECKING WHETHER THE PRODUCT ALREADY EXISTS IN THE CART
         cartProducts.forEach((product)=>{
-            if(productName === product.productName){
+            if(productId === product.productId){
                 productAlreadyExists = product
             }
         })
 
+        //IF PRODUCT ALREADY EXISTS, INCREASING THE QUANTITY
         if(productAlreadyExists){
             productAlreadyExists.quantity +=1;
         }
         else{
             cartProducts.push({
-                productName : productName,
+                productId : productId,
                 quantity : 1
             })
-        }
-        
+        }    
         console.log(cartProducts);
-        
+            
     })
 })
 
