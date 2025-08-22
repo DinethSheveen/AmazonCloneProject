@@ -1,5 +1,6 @@
 import { cartProducts } from "../data/cart.js"
 import { products } from "../data/products.js"
+import { formatCurrency } from "./generalFunctions/currencyFormatter.js"
 
 const productElement = document.querySelector(".products-grid")
 const cartElement = document.querySelector(".cart-quantity")
@@ -26,7 +27,7 @@ products.forEach((product)=>{
             </div>
 
             <div class="product-price">
-                &pound;${(product.priceInCents/100).toFixed(2)}
+                &pound;${formatCurrency(product.priceInCents)}
             </div>
 
             <div class="product-quantity-container">
