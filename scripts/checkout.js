@@ -106,3 +106,13 @@ document.querySelectorAll(".delete-quantity-link").forEach((product)=>{
         saveCart()    
     })
 })
+
+let totalProducts=0;
+//FUNCTION TO UPDATE THE CART TOTAL HEADER
+function updateTotalItems(){
+    cartProducts.forEach((product)=>{
+        totalProducts += product.quantity
+    })
+    document.querySelector(".js-cart-total").innerHTML = `${totalProducts} items`;
+}
+updateTotalItems()

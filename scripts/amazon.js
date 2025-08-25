@@ -108,6 +108,7 @@ function updateCartQuantity(){
 
     cartElement.innerHTML = cartCount
 }
+updateCartQuantity()
 
 
 
