@@ -1,4 +1,4 @@
-import { cartProducts, saveCart } from "../data/cart.js"
+import { cartProducts, addToCart } from "../data/cart.js"
 import { products } from "../data/products.js"
 import { formatCurrency } from "./generalFunctions/currencyFormatter.js"
 
@@ -59,30 +59,6 @@ products.forEach((product)=>{
         </div>
     `
 })
-
-function addToCart(id){
-    // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
-    let existingProduct;
-
-    //CHECKING WHETHER THE PRODUCT ALREADY EXISTS IN THE CART
-    cartProducts.forEach((product)=>{
-        if(id === product.productId){
-            existingProduct = product
-        }
-    })
-
-    //IF PRODUCT ALREADY EXISTS, INCREASING THE QUANTITY
-    if(existingProduct){
-        existingProduct.quantity +=1;
-    }
-    else{
-        cartProducts.push({
-            productId : id,
-            quantity : 1
-        })
-    }
-    saveCart()
-}
 
 //LOCATING THE ADD TO CART BUTTON
 const addBtn = document.querySelectorAll(".add-to-cart-button");
