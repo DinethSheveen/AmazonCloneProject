@@ -18,8 +18,5 @@ export function removeFromCart(id){
         }
     })
 
-    cartProducts = newCart
-
-    console.log(cartProducts);
-    
+    cartProducts = newCart    
 }
