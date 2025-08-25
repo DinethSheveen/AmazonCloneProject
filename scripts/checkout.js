@@ -1,4 +1,4 @@
-import { cartProducts, removeFromCart} from "../data/cart.js";
+import { cartProducts, removeFromCart, saveCart} from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./generalFunctions/currencyFormatter.js";
 
@@ -93,49 +93,16 @@ products.forEach((product)=>{
 
 document.querySelectorAll(".delete-quantity-link").forEach((product)=>{
     product.addEventListener("click",()=>{
+        //REMOVING THE PRODUCT FROM THE CART
         let productId = product.dataset.productId;
         let userConfirmation = confirm("Do you want to delete this product from the cart?");
         if(userConfirmation){
             removeFromCart(productId)
         }
+
+        //REMOVING THE PRODUCT CONTAINER ONCE THE DELETE LINK IS CLICKED 
         const containerProduct = document.querySelector(`.cart-item-container-${productId}`)
-        containerProduct.remove()        
+        containerProduct.remove()    
+        saveCart()    
     })
 })
-
-/*
-<div class="payment-summary">
-                <div class="payment-summary-title">
-                    Order Summary
-                </div>
-
-                <div class="payment-summary-row">
-                  <div>Items (3):</div>
-                  <div class="payment-summary-money">$42.75</div>
-                </div>
-
-                <div class="payment-summary-row">
-                  <div>Shipping &amp; handling:</div>
-                  <div class="payment-summary-money">$4.99</div>
-                </div>
-
-                <div class="payment-summary-row subtotal-row">
-                  <div>Total before tax:</div>
-                  <div class="payment-summary-money">$47.74</div>
-                </div>
-
-                <div class="payment-summary-row">
-                  <div>Estimated tax (10%):</div>
-                  <div class="payment-summary-money">$4.77</div>
-                </div>
-
-                <div class="payment-summary-row total-row">
-                  <div>Order total:</div>
-                  <div class="payment-summary-money">$52.51</div>
-                </div>
-
-                <button class="place-order-button button-primary">
-                  Place your order
-                </button>
-            </div>
-*/
