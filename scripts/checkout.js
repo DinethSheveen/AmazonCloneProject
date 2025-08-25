@@ -4,7 +4,9 @@ import { formatCurrency } from "./generalFunctions/currencyFormatter.js";
 
 const cartElements = document.querySelector(".order-summary")
 
-cartProducts.forEach((cartProduct)=>{
+function displayCart(){
+    cartElements.innerHTML = ""
+    cartProducts.forEach((cartProduct)=>{
     let productId = cartProduct.productId;
     let existingElement;
     products.forEach((product)=>{
@@ -89,13 +91,19 @@ cartProducts.forEach((cartProduct)=>{
                 </div>
             </div>
         `    
-})
+    })
+}
+displayCart()
 
 
 document.querySelectorAll(".delete-quantity-link").forEach((product)=>{
     product.addEventListener("click",()=>{
         let productId = product.dataset.productId;
-        removeFromCart(productId)
+        let userConfirmation = confirm("Do you want to delete this product from the cart?");
+        if(userConfirmation){
+            removeFromCart(productId)
+        }
+        displayCart()
     })
 })
 
