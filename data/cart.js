@@ -13,6 +13,30 @@ if (!cartProducts){
     ]
 }
 
+export function addToCart(id){
+    // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
+    let existingProduct;
+
+    //CHECKING WHETHER THE PRODUCT ALREADY EXISTS IN THE CART
+    cartProducts.forEach((product)=>{
+        if(id === product.productId){
+            existingProduct = product
+        }
+    })
+
+    //IF PRODUCT ALREADY EXISTS, INCREASING THE QUANTITY
+    if(existingProduct){
+        existingProduct.quantity +=1;
+    }
+    else{
+        cartProducts.push({
+            productId : id,
+            quantity : 1
+        })
+    }
+    saveCart()
+}
+
 export function removeFromCart(id){
     let newCart = [];
 
