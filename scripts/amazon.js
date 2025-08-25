@@ -1,4 +1,4 @@
-import { cartProducts } from "../data/cart.js"
+import { cartProducts, saveCart } from "../data/cart.js"
 import { products } from "../data/products.js"
 import { formatCurrency } from "./generalFunctions/currencyFormatter.js"
 
@@ -81,6 +81,7 @@ function addToCart(id){
             quantity : 1
         })
     }
+    saveCart()
 }
 
 //LOCATING THE ADD TO CART BUTTON
