@@ -1,17 +1,19 @@
-import { cartProducts, removeFromCart, saveCart} from "../data/cart.js";
+import { cartProducts, removeFromCart, saveCart} from "../data/cart.js";    //NAMED EXPORT
 import { products } from "../data/products.js";
 import { formatCurrency } from "./generalFunctions/currencyFormatter.js";
+import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";  //DEFAULT EXPORT
+import {deliveryOptions} from "../data/delivery.js"
 
 const cartElements = document.querySelector(".order-summary")
 
-cartProducts.forEach((cartProduct)=>{
-let productId = cartProduct.productId;
-let existingElement;
-products.forEach((product)=>{
-    if(product.productId === productId){
-        existingElement = product
-    }
-})
+cartProducts.forEach((cartProduct)=>{    
+    let productId = cartProduct.productId;
+    let existingElement;
+    products.forEach((product)=>{
+        if(product.productId === productId){
+            existingElement = product
+        }
+    })
 
     cartElements.innerHTML +=`
         <div class="cart-item-container cart-item-container-${existingElement.productId}">
@@ -49,42 +51,9 @@ products.forEach((product)=>{
                     <div class="delivery-options-title">
                         Choose a delivery option:
                     </div>
-                    <div class="delivery-option">
-                        <input type="radio" checked class="delivery-option-input" name="${existingElement.productId}">
-                        <div>
-                            <div class="delivery-option-date">
-                                Tuesday, June 21
-                            </div>
-                            <div class="delivery-option-price">
-                            FREE Shipping
-                            </div>
-                        </div>
-                    </div>
+
+                    ${renderDateHTML(existingElement,cartProduct)}
                     
-                    <div class="delivery-option">
-                        <input type="radio" class="delivery-option-input" name="${existingElement.productId}">
-                        <div>
-                            <div class="delivery-option-date">
-                                Wednesday, June 15
-                            </div>
-                            <div class="delivery-option-price">
-                            $4.99 - Shipping
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="delivery-option">
-                        <input type="radio" class="delivery-option-input"
-                            name="${existingElement.productId}">
-                        <div>
-                            <div class="delivery-option-date">
-                                Monday, June 13
-                            </div>
-                            <div class="delivery-option-price">
-                            $9.99 - Shipping
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -107,12 +76,34 @@ document.querySelectorAll(".delete-quantity-link").forEach((product)=>{
     })
 })
 
-let totalProducts=0;
-//FUNCTION TO UPDATE THE CART TOTAL HEADER
-function updateTotalItems(){
-    cartProducts.forEach((product)=>{
-        totalProducts += product.quantity
+
+function renderDateHTML(existingElement,product){
+    let html = ""
+
+    deliveryOptions.forEach((deliveryOption)=>{
+        const today = dayjs()
+        let deliveryDate = today.add(deliveryOption.deliveryDays,"days") 
+        let dateString = deliveryDate.format("dddd, MMMM DD");
+        let priceString = deliveryOption.deliveryPriceInCents
+
+
+        //CHECKING WHAT RADIO BUTTON SHOULD BE CHECKED
+        let shippingOption = product.deliveryOptionId === deliveryOption.deliveryId ? "checked" : ""
+
+        html += `
+        <div class="delivery-option">
+            <input type="radio" ${shippingOption} class="delivery-option-input" name="${existingElement.productId}">
+            <div>
+                <div class="delivery-option-date">
+                    ${dateString}
+                </div>
+                <div class="delivery-option-price">
+                    ${priceString === 0 ? "FREE" : formatCurrency( priceString)} - Shipping
+                </div>
+            </div>
+        </div>
+        `
     })
-    document.querySelector(".js-cart-total").innerHTML = `${totalProducts} items`;
+
+    return html
 }
-updateTotalItems()
