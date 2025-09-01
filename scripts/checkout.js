@@ -15,10 +15,17 @@ cartProducts.forEach((cartProduct)=>{
         }
     })
 
+    let shippingDate = "";
+    deliveryOptions.forEach((deliveryOption)=>{
+        if(cartProduct.deliveryOptionId === deliveryOption.deliveryId){
+            shippingDate = dayjs().add(deliveryOption.deliveryDays,"days").format("dddd, MMMM DD")
+        }
+    })
+
     cartElements.innerHTML +=`
         <div class="cart-item-container cart-item-container-${existingElement.productId}">
             <div class="delivery-date">
-            Delivery date: Tuesday, June 21
+            Delivery date: ${shippingDate}
             </div>
 
             <div class="cart-item-details-grid">
