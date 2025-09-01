@@ -1,3 +1,5 @@
+import { renderPaymentSummary } from "../scripts/checkout/paymentSummary.js";
+
 export let cartProducts = JSON.parse(localStorage.getItem("cart"))
 
 if (!cartProducts){
@@ -50,6 +52,7 @@ export function removeFromCart(id){
     })
 
     cartProducts = newCart
+    renderPaymentSummary()
     saveCart()  
 }
 
