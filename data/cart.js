@@ -17,7 +17,7 @@ if (!cartProducts){
     ]
 }
 
-export function addToCart(id){
+export function addToCart(id,productCount){
     // A VARIABLE TO STORE THE DUPLICATE ELEMENTS, IF EXISTS
     let existingProduct;
 
@@ -30,12 +30,12 @@ export function addToCart(id){
 
     //IF PRODUCT ALREADY EXISTS, INCREASING THE QUANTITY
     if(existingProduct){
-        existingProduct.quantity +=1;
+        existingProduct.quantity += productCount;
     }
     else{
         cartProducts.push({
             productId : id,
-            quantity : 1,
+            quantity : productCount,
             deliveryOptionId : "1"
         })
     }
