@@ -1,4 +1,4 @@
-import { cartProducts, removeFromCart, saveCart} from "../data/cart.js";    //NAMED EXPORT
+import { cartProducts, removeFromCart, saveCart, updateShippingDate} from "../data/cart.js";    //NAMED EXPORT
 import { products } from "../data/products.js";
 import { formatCurrency } from "./generalFunctions/currencyFormatter.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";  //DEFAULT EXPORT
@@ -15,6 +15,7 @@ cartProducts.forEach((cartProduct)=>{
         }
     })
 
+    //SELECTS THE DELIVERY OPTION AND CHANGES THE HEADER AS PER CHOICE
     let shippingDate = "";
     deliveryOptions.forEach((deliveryOption)=>{
         if(cartProduct.deliveryOptionId === deliveryOption.deliveryId){
@@ -71,10 +72,6 @@ document.querySelectorAll(".delete-quantity-link").forEach((product)=>{
     product.addEventListener("click",()=>{
         //REMOVING THE PRODUCT FROM THE CART
         let productId = product.dataset.productId;
-        let userConfirmation = confirm("Do you want to delete this product from the cart?");
-        if(userConfirmation){
-            removeFromCart(productId)
-        }
 
         //REMOVING THE PRODUCT CONTAINER ONCE THE DELETE LINK IS CLICKED 
         const containerProduct = document.querySelector(`.cart-item-container-${productId}`)
@@ -83,7 +80,7 @@ document.querySelectorAll(".delete-quantity-link").forEach((product)=>{
     })
 })
 
-
+//FUNCTION TO GENERATE THE HTML FOR THE DELIVERY OPTIONS
 function renderDateHTML(existingElement,product){
     let html = ""
 
@@ -98,7 +95,7 @@ function renderDateHTML(existingElement,product){
         let shippingOption = product.deliveryOptionId === deliveryOption.deliveryId ? "checked" : ""
 
         html += `
-        <div class="delivery-option">
+        <div class="delivery-option" data-product-id = "${existingElement.productId}" data-delivery-id = "${deliveryOption.deliveryId}">
             <input type="radio" ${shippingOption} class="delivery-option-input" name="${existingElement.productId}">
             <div>
                 <div class="delivery-option-date">
@@ -111,6 +108,12 @@ function renderDateHTML(existingElement,product){
         </div>
         `
     })
-
     return html
 }
+
+document.querySelectorAll(".delivery-option").forEach((option)=>{
+    option.addEventListener("click",()=>{
+        const {productId,deliveryId} = option.dataset
+        updateShippingDate(productId,deliveryId)
+    })
+})
