@@ -57,3 +57,18 @@ export function removeFromCart(id){
 export function saveCart(){
     localStorage.setItem("cart",JSON.stringify(cartProducts))
 }
+
+ // A FUNCTION TO CHANGE THE SHIPPING OPTIONS
+
+export function updateShippingDate(productId,deliveryId){
+    let existingProduct;
+
+    cartProducts.forEach((cartProduct)=>{
+        if(cartProduct.productId === productId){
+            existingProduct = cartProduct
+        }
+    })
+
+    existingProduct.deliveryOptionId = deliveryId;
+    saveCart()
+}
