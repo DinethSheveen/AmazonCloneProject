@@ -1,4 +1,4 @@
-import { cartProducts, addToCart } from "../data/cart.js"
+import { addToCart, updateCartTotal } from "../data/cart.js"
 import { products } from "../data/products.js"
 import { formatCurrency } from "./generalFunctions/currencyFormatter.js"
 
@@ -67,21 +67,9 @@ addBtn.forEach((product)=>{
         let productCount = Number(productCountElement.value)
                 
         addToCart(productId,productCount)
-        updateCartQuantity()         
+        updateCartTotal(cartElement)         
     })    
 })
 
-function updateCartQuantity(){
-    let cartCount = 0;
-
-    cartProducts.forEach((product)=>{
-        cartCount += product.quantity
-    })
-
-    cartElement.innerHTML = cartCount
-}
-updateCartQuantity()
-
-
-
+updateCartTotal(cartElement)
 
