@@ -75,3 +75,13 @@ export function updateShippingDate(productId,deliveryId){
     existingProduct.deliveryOptionId = deliveryId;
     saveCart()
 }
+
+export function updateCartTotal(element){
+    let cartCount = 0;
+
+    cartProducts.forEach((product)=>{
+        cartCount += product.quantity
+    })
+
+    element.innerHTML = cartCount
+}
