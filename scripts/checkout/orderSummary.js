@@ -1,4 +1,4 @@
-import { cartProducts, removeFromCart, saveCart, updateShippingDate} from "../../data/cart.js";    //NAMED EXPORT
+import { cartProducts, removeFromCart, saveCart, updateCartTotal, updateShippingDate} from "../../data/cart.js";    //NAMED EXPORT
 import { products } from "../../data/products.js";
 import { formatCurrency } from "../generalFunctions/currencyFormatter.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";  //DEFAULT EXPORT
@@ -6,6 +6,7 @@ import {deliveryOptions} from "../../data/delivery.js"
 import { renderPaymentSummary } from "./paymentSummary.js";
 
 const cartElements = document.querySelector(".order-summary")
+const header = document.querySelector(".js-cart-total")
 
 export function renderOrderSummary(){
     cartElements.innerHTML = ""
@@ -79,7 +80,8 @@ export function renderOrderSummary(){
             //REMOVING THE PRODUCT CONTAINER ONCE THE DELETE LINK IS CLICKED 
             const containerProduct = document.querySelector(`.cart-item-container-${productId}`)
             containerProduct.remove()
-            removeFromCart(productId)    
+            removeFromCart(productId)  
+            updateCartTotal(header)  
             saveCart()    
         })
     })
@@ -124,3 +126,5 @@ export function renderOrderSummary(){
         })
     })
 }
+
+updateCartTotal(header)
