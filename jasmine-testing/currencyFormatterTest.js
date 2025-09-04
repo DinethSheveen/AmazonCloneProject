@@ -7,4 +7,8 @@ describe("Test Suite : Currency Formatter",()=>{
         //CONDITION IN JASMINE TESTING FRAMEWORK    expect(testing function) {returns an object}
         expect(formatCurrency(2025)).toEqual("20.25")
     })
+
+    it("0 to a decimal",()=>{
+        expect(formatCurrency(0)).toEqual("0.00")
+    })
 })
