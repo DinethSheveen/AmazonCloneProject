@@ -11,4 +11,8 @@ describe("Test Suite : Currency Formatter",()=>{
     it("0 to a decimal",()=>{
         expect(formatCurrency(0)).toEqual("0.00")
     })
+
+    it("deciaml to the nearest decimal",()=>{
+        expect(formatCurrency(2000.5)).toEqual("20.01")
+    })
 })
