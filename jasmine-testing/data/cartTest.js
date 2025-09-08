@@ -15,4 +15,13 @@ describe("TEST SUITE : CART RELATED TESTS",()=>{
         expect(cartProducts[0].productId).toEqual("e43638ce-6aa0-4b85-b27f-e1d07eb678c6")
         expect(cartProducts[0].quantity).toEqual(1)
     })
+
+    //TESTCASE - 02 
+    it("Adding existing products to the cart",()=>{
+        let productQuantity = cartProducts[0].quantity
+        
+        addToCart("e43638ce-6aa0-4b85-b27f-e1d07eb678c6",2)
+        
+        expect(cartProducts[0].quantity).toEqual(productQuantity+2)
+    })
 })
