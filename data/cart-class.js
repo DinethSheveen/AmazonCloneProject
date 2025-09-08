@@ -1,12 +1,14 @@
 class Cart{    
     cartProducts = undefined;
+    #localStorageKey = undefined;
 
     constructor(localStorageKey){
         this.localStorageKey = localStorageKey
+        this.#loadCartProductsFromStorage()
     }
 
-    loadCartProductsFromStorage(){
-        this.cartProducts = JSON.parse(localStorage.getItem(this.localStorageKey))
+    #loadCartProductsFromStorage(){
+        this.cartProducts = JSON.parse(localStorage.getItem(this.#localStorageKey))
 
         if (!this.cartProducts){
             this.cartProducts = [
@@ -65,7 +67,7 @@ class Cart{
 
     //SAVING THE CART DATA TO LOCAL STORAGE
     saveCart(){
-        localStorage.setItem(this.localStorageKey,JSON.stringify(this.cartProducts))
+        localStorage.setItem(this.#localStorageKey,JSON.stringify(this.cartProducts))
     }
 
     // A FUNCTION TO CHANGE THE SHIPPING OPTIONS
@@ -95,14 +97,12 @@ class Cart{
 }
 
 
-const carts = new Cart("business-cart")
-carts.loadCartProductsFromStorage()
-carts.addToCart("54e0eccd-8f36-462b-b68a-8182611d9add",1)
+const businesscart = new Cart("business-cart")
+businesscart.addToCart("54e0eccd-8f36-462b-b68a-8182611d9add",1)
 
-const cartss = new Cart("cart")
-cartss.loadCartProductsFromStorage()
+const cartss = new Cart("cart");
 
-console.log(carts);
+console.log(businesscart);
 console.log(cartss);
 
 
