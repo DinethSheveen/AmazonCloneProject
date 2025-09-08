@@ -94,11 +94,16 @@ function Cart(localStorageKey){
     return cart
 }
 
-const cart = Cart("business-cart");
-
+const cart = Cart("cart-oop");
 cart.loadCartProductsFromStorage()
+cart.addToCart("54e0eccd-8f36-462b-b68a-8182611d9add",1)
+
+const businessCart = Cart("business-cart")
+businessCart.loadCartProductsFromStorage()
 
 console.log(cart);
+console.log(businessCart);
+
 //cart.addToCart("54e0eccd-8f36-462b-b68a-8182611d9add",1)
 
 
