@@ -23,5 +23,6 @@ describe("TEST SUITE : CART RELATED TESTS",()=>{
         addToCart("e43638ce-6aa0-4b85-b27f-e1d07eb678c6",2)
         
         expect(cartProducts[0].quantity).toEqual(productQuantity+2)
+        expect(cartProducts.length).toEqual(1)
     })
 })
