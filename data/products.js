@@ -1,3 +1,28 @@
+import {formatCurrency} from "../scripts/generalFunctions/currencyFormatter.js"
+class Product{
+  productId;
+  productImage;
+  productName;
+  rating;
+  priceInCents;
+
+  constructor(product){
+    this.productId = product.productId;
+    this.productImage = product.productImage;
+    this.productName = product.productName;
+    this.rating = product.rating;
+    this.priceInCents = product.priceInCents;
+  }
+
+  getImage(){
+    return `images/ratings/rating-${this.rating.stars*10}.png`
+  }
+
+  getPrice(){
+    return `${formatCurrency(this.priceInCents)}`
+  }
+}
+
 export const products = [
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -657,4 +682,6 @@ export const products = [
       "mens"
     ]
   }
-];
+].map((product)=>{
+  return new Product(product)
+});
