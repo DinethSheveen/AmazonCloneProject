@@ -25,6 +25,10 @@ class Product{
   getSizeChartLink(){
     return `<a href=""></a>`
   }
+
+  getWarrantyLink(){
+    return `<a href=""></a>`
+  }
 }
 
 class Clothing extends Product{
@@ -37,8 +41,22 @@ class Clothing extends Product{
 
   getSizeChartLink(){
     return `
-      <a href="../images/clothing_size_chart.png" target="_blank" class="size-chart">Size Chart</a>
+      <a href="../images/${this.sizeChartLink}" target="_blank" class="size-chart">Size Chart</a>
     `
+  }
+}
+
+class Appliance extends Product{
+  warrantyLink;
+
+  constructor(product){
+    super(product),
+    this.warrantyLink = product.warrantyLink
+  }
+
+  getWarrantyLink(){
+    return `
+    <a href="../images/${this.warrantyLink}" target="_blank" class="size-chart">Warranty Info</a>`
   }
 }
 
@@ -102,7 +120,9 @@ export const products = [
       "toaster",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type : "appliance",
+    warrantyLink : "/appliance-warranty.png"
   },
   {
     productId: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
@@ -146,7 +166,9 @@ export const products = [
       "hoodies",
       "sweaters",
       "apparel"
-    ]
+    ],
+    type : "clothing",
+    sizeChartLink : "/clothing-size-chart.png"
   },
   {
     productId: "77919bbe-0e56-475b-adde-4f24dfed3a04",
@@ -592,7 +614,9 @@ export const products = [
       "coffeemakers",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type : "appliance",
+    warrantyLink : "/appliance-warranty.png"
   },
   {
     productId: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
@@ -652,7 +676,9 @@ export const products = [
       "food blenders",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type : "appliance",
+    warrantyLink : "/appliance-warranty.png"
   },
   {
     productId: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
@@ -699,11 +725,16 @@ export const products = [
       "hoodies",
       "apparel",
       "mens"
-    ]
+    ],
+    type : "clothing",
+    sizeChartLink : "/clothing-size-chart.png"
   }
 ].map((product)=>{
   if(product.type === "clothing"){
     return new Clothing(product)
+  }
+  else if(product.type === "appliance"){
+    return new Appliance(product)
   }
   else{
     return new Product(product)
