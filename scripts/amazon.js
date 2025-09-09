@@ -47,6 +47,8 @@ products.forEach((product)=>{
 
             <div class="product-spacer"></div>
 
+            ${product.getSizeChartLink()}
+
             <button class="add-to-cart-button button-primary"
             data-product-id = "${product.productId}">
                 Add to Cart
