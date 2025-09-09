@@ -20,14 +20,14 @@ products.forEach((product)=>{
 
             <div class="product-rating-container">
                 <img class="product-rating-stars"
-                src="images/ratings/rating-${product.rating.stars*10}.png">
+                src="${product.getImage()}">
                 <div class="product-rating-count link-primary">
                     ${product.rating.count}
                 </div>
             </div>
 
             <div class="product-price">
-                &pound;${formatCurrency(product.priceInCents)}
+                &pound;${product.getPrice()}
             </div>
 
             <div class="product-quantity-container">
