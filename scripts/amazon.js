@@ -48,6 +48,7 @@ products.forEach((product)=>{
             <div class="product-spacer"></div>
 
             ${product.getSizeChartLink()}
+            ${product.getWarrantyLink()}
 
             <button class="add-to-cart-button button-primary"
             data-product-id = "${product.productId}">
