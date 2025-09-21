@@ -1,10 +1,14 @@
-1. Project Title & Overview
+#Amazon Clone Project
 
-Amazon Clone
+## A semi functinal Amazon project built with use of HTML, CSS and JavaScript
+A simple Amazon clone built with HTML, CSS, and JavaScript, featuring shopping cart functionality, delivery date modification, and search.
+*Search for products
+*Add products to the cart
+*Delete products from the cart
+*Update delivery options
+*Storing cart data on local storage
 
-Short description: “A simple Amazon clone built with HTML, CSS, and JavaScript, featuring shopping cart functionality, delivery date modification, and search.”
-
-2. Features
+#Features
 
 Add to cart
 
@@ -14,24 +18,26 @@ Modify delivery date
 
 Search for items
 
-3. Tech Stack
+Storing cart data on local storage
+
+#Tech Stack
 
 HTML5
 
 CSS3
 
-JavaScript (Vanilla)
+JavaScript
 
-4. Installation & Setup
+# Installation & Setup
 Since it’s static files, super simple:
 
-git clone https://github.com/your-username/amazon-clone.git
-cd amazon-clone
+git clone https://github.com/DinethSheveen/AmazonCloneProject.git
+cd AmazonCloneProject
 
 
 Then just open index.html in your browser.
 
-5. Usage
+# Usage
 
 Browse available products.
 
@@ -41,9 +47,8 @@ Add products to the cart and remove them if needed.
 
 Update delivery dates for selected products.
 
-6. Screenshots (Optional)
+# Screenshots
 
-Insert screenshots of home page, cart page, search results, etc.
 
 7. Future Improvements
 
@@ -51,4 +56,3 @@ Add user login/authentication
 
 Implement checkout & payment flow
 
-Store cart data in local storage
