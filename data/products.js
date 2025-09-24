@@ -71,7 +71,10 @@ export const products = [
       keywords: [
       "socks",
       "sports",
-      "apparel"
+      "apparel",
+      "clothing",
+      "clothes",
+      "footwear"
     ],
     },
     priceInCents: 1090
@@ -86,7 +89,9 @@ export const products = [
       keywords: [
       "sports",
       "basketball",
-      "basketballs"
+      "basketballs",
+      "balls",
+      "ball"
     ]
     },
     priceInCents: 2095,
@@ -102,7 +107,9 @@ export const products = [
       "tshirts",
       "t-shirts",
       "apparel",
-      "mens"
+      "mens",
+      "clothing",
+      "clothes"
     ],
     },
     priceInCents: 799,
@@ -119,7 +126,8 @@ export const products = [
       keywords: [
       "toaster",
       "kitchen",
-      "appliances"
+      "appliances",
+      "toast"
     ],
     },
     priceInCents: 1899,
@@ -136,7 +144,9 @@ export const products = [
       keywords: [
       "plates",
       "kitchen",
-      "dining"
+      "dining",
+      "dishes",
+      "dish"
     ]
     },
     priceInCents: 2067,
@@ -150,7 +160,8 @@ export const products = [
       count: 175,
       keywords: [
       "kitchen",
-      "cookware"
+      "cookware",
+      "appliances"
     ]
     },
     priceInCents: 3499,
@@ -165,7 +176,9 @@ export const products = [
       keywords: [
       "hoodies",
       "sweaters",
-      "apparel"
+      "apparel",
+      "clothing",
+      "clothes"
     ],
     },
     priceInCents: 2400,
@@ -184,7 +197,8 @@ export const products = [
       "washroom",
       "restroom",
       "towels",
-      "bath towels"
+      "bath towels",
+      "towel"
     ]
     },
     priceInCents: 3599,
@@ -198,7 +212,9 @@ export const products = [
       count: 305,
       keywords: [
       "bathroom",
-      "cleaning"
+      "cleaning",
+      "detergent",
+      "detergents"
     ]
     },
     priceInCents: 2899,
@@ -213,7 +229,8 @@ export const products = [
       keywords: [
       "shoes",
       "running shoes",
-      "footwear"
+      "footwear",
+      "foot-wear"
     ]
     },
     priceInCents: 3390,
@@ -230,7 +247,9 @@ export const products = [
       "swimsuit",
       "swimming",
       "bathing",
-      "apparel"
+      "apparel",
+      "clothing",
+      "clothes"
     ],
     },
     priceInCents: 2070,
@@ -246,7 +265,9 @@ export const products = [
       count: 30,
       keywords: [
       "accessories",
-      "shades"
+      "shades",
+      "sunglasses",
+      "sunglass"
     ]
     },
     priceInCents: 1560,
@@ -263,7 +284,8 @@ export const products = [
       "sandals",
       "womens",
       "beach",
-      "summer"
+      "summer",
+      "foot-wear"
     ]
     },
     priceInCents: 2499,
@@ -293,7 +315,9 @@ export const products = [
       keywords: [
       "shorts",
       "apparel",
-      "mens"
+      "mens",
+      "clothing",
+      "clothes"
     ]
     },
     priceInCents: 1699,
@@ -325,7 +349,8 @@ export const products = [
       "tissues",
       "kitchen",
       "tissues box",
-      "napkins"
+      "napkins",
+      "tissue"
     ]
     },
     priceInCents: 2374,
@@ -354,7 +379,7 @@ export const products = [
       stars: 4.5,
       count: 52,
       keywords: [
-      "jewelry",
+      "jewellery",
       "accessories",
       "womens"
     ]
@@ -373,7 +398,9 @@ export const products = [
       "hoodies",
       "sweaters",
       "womens",
-      "apparel"
+      "apparel",
+      "clothing",
+      "clothes"
     ],
     },
     priceInCents: 1374,
@@ -420,9 +447,13 @@ export const products = [
       count: 2556,
       keywords: [
       "tshirts",
+      "t-shirts",
+      "tshirt",
       "shirts",
       "apparel",
-      "mens"
+      "mens",
+      "clothing",
+      "clothes"
     ],
     },
     priceInCents: 1599,
@@ -440,7 +471,10 @@ export const products = [
       "garbage",
       "bins",
       "cans",
-      "kitchen"
+      "kitchen",
+      "trash can",
+      "trash-can",
+      "trash"
     ]
     },
     priceInCents: 8300,
@@ -475,7 +509,9 @@ export const products = [
       "beanies",
       "tuques",
       "apparel",
-      "womens"
+      "womens",
+      "clothing",
+      "clothes"
     ]
     },
     priceInCents: 1250,
@@ -490,7 +526,9 @@ export const products = [
       keywords: [
       "pants",
       "apparel",
-      "mens"
+      "mens",
+      "clothing",
+      "clothes"
     ]
     },
     priceInCents: 2290,
@@ -506,7 +544,8 @@ export const products = [
       "shoes",
       "running shoes",
       "footwear",
-      "mens"
+      "mens",
+      "sneakers"
     ]
     },
     priceInCents: 3890,
@@ -536,7 +575,8 @@ export const products = [
       count: 511,
       keywords: [
       "cooking set",
-      "kitchen"
+      "kitchen",
+      "appliances"
     ]
     },
     priceInCents: 6797,
@@ -569,7 +609,9 @@ export const products = [
       "sweatpants",
       "jogging",
       "apparel",
-      "womens"
+      "womens",
+      "clothing",
+      "clothes"
     ]
     },
     priceInCents: 2400,
@@ -583,7 +625,8 @@ export const products = [
       count: 117,
       keywords: [
       "accessories",
-      "womens"
+      "womens",
+      "jewellery"
     ]
     },
     priceInCents: 2400,
@@ -598,7 +641,8 @@ export const products = [
       keywords: [
       "boxes",
       "food containers",
-      "kitchen"
+      "kitchen",
+      "appliances"
     ]
     },
     priceInCents: 2899,
@@ -644,7 +688,8 @@ export const products = [
       keywords: [
       "bathroom",
       "home",
-      "towels"
+      "towels",
+      "towel"
     ]
     },
     priceInCents: 2110,
@@ -660,7 +705,8 @@ export const products = [
       "shoes",
       "running shoes",
       "footwear",
-      "womens"
+      "womens",
+      "sneakers"
     ]
     },
     priceInCents: 3390,
@@ -693,7 +739,8 @@ export const products = [
       "mixing bowls",
       "baking",
       "cookware",
-      "kitchen"
+      "kitchen",
+      "appliances"
     ]
     },
     priceInCents: 3899,
@@ -708,7 +755,8 @@ export const products = [
       keywords: [
       "kitchen",
       "kitchen towels",
-      "tissues"
+      "tissues",
+      "tissue"
     ]
     },
     priceInCents: 5799,
@@ -724,7 +772,9 @@ export const products = [
       "sweaters",
       "hoodies",
       "apparel",
-      "mens"
+      "mens",
+      "clothing",
+      "clothes"
     ],
     },
     priceInCents: 2400,
