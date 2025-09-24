@@ -44,3 +44,6 @@ Since it’s a static project, setup is simple:
 ```bash
 git clone https://github.com/DinethSheveen/AmazonCloneProject.git
 cd AmazonCloneProject
+code . (To open vs code with the project folder)
+Run/Open amazon.html file with live server
+```
