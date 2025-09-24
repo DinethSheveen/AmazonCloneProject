@@ -67,14 +67,14 @@ export const products = [
     productName: "Black and Gray Athletic Cotton Socks - 6 Pairs",
     rating: {
       stars: 4.5,
-      count: 87
-    },
-    priceInCents: 1090,
-    keywords: [
+      count: 87,
+      keywords: [
       "socks",
       "sports",
       "apparel"
-    ]
+    ],
+    },
+    priceInCents: 1090
   },
   {
     productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
@@ -82,13 +82,14 @@ export const products = [
     productName: "Intermediate Size Basketball",
     rating: {
       stars: 4,
-      count: 127
-    },
-    priceInCents: 2095,
-    keywords: [
+      count: 127,
+      keywords: [
       "sports",
+      "basketball",
       "basketballs"
     ]
+    },
+    priceInCents: 2095,
   },
   {
     productId: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
@@ -96,14 +97,15 @@ export const products = [
     productName: "Adults Plain Cotton T-Shirt - 2 Pack",
     rating: {
       stars: 4.5,
-      count: 56
-    },
-    priceInCents: 799,
-    keywords: [
+      count: 56,
+      keywords: [
       "tshirts",
+      "t-shirts",
       "apparel",
       "mens"
     ],
+    },
+    priceInCents: 799,
     type: "clothing",
     sizeChartLink: "/clothing-size-chart.png"
   },
@@ -113,14 +115,14 @@ export const products = [
     productName: "2 Slot Toaster - Black",
     rating: {
       stars: 5,
-      count: 2197
-    },
-    priceInCents: 1899,
-    keywords: [
+      count: 2197,
+      keywords: [
       "toaster",
       "kitchen",
       "appliances"
     ],
+    },
+    priceInCents: 1899,
     type : "appliance",
     warrantyLink : "/appliance-warranty.png"
   },
@@ -130,14 +132,14 @@ export const products = [
     productName: "6 Piece White Dinner Plate Set",
     rating: {
       stars: 4,
-      count: 37
-    },
-    priceInCents: 2067,
-    keywords: [
+      count: 37,
+      keywords: [
       "plates",
       "kitchen",
       "dining"
     ]
+    },
+    priceInCents: 2067,
   },
   {
     productId: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
@@ -145,13 +147,13 @@ export const products = [
     productName: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
     rating: {
       stars: 4.5,
-      count: 175
-    },
-    priceInCents: 3499,
-    keywords: [
+      count: 175,
+      keywords: [
       "kitchen",
       "cookware"
     ]
+    },
+    priceInCents: 3499,
   },
   {
     productId: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
@@ -159,14 +161,14 @@ export const products = [
     productName: "Plain Hooded Fleece Sweatshirt",
     rating: {
       stars: 4.5,
-      count: 317
-    },
-    priceInCents: 2400,
-    keywords: [
+      count: 317,
+      keywords: [
       "hoodies",
       "sweaters",
       "apparel"
     ],
+    },
+    priceInCents: 2400,
     type : "clothing",
     sizeChartLink : "/clothing-size-chart.png"
   },
@@ -176,16 +178,16 @@ export const products = [
     productName: "Luxury Towel Set - Graphite Gray",
     rating: {
       stars: 4.5,
-      count: 144
-    },
-    priceInCents: 3599,
-    keywords: [
+      count: 144,
+      keywords: [
       "bathroom",
       "washroom",
       "restroom",
       "towels",
       "bath towels"
     ]
+    },
+    priceInCents: 3599,
   },
   {
     productId: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
@@ -193,13 +195,13 @@ export const products = [
     productName: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
     rating: {
       stars: 4.5,
-      count: 305
-    },
-    priceInCents: 2899,
-    keywords: [
+      count: 305,
+      keywords: [
       "bathroom",
       "cleaning"
     ]
+    },
+    priceInCents: 2899,
   },
   {
     productId: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
@@ -207,14 +209,14 @@ export const products = [
     productName: "Waterproof Knit Athletic Sneakers - Gray",
     rating: {
       stars: 4,
-      count: 89
-    },
-    priceInCents: 3390,
-    keywords: [
+      count: 89,
+      keywords: [
       "shoes",
       "running shoes",
       "footwear"
     ]
+    },
+    priceInCents: 3390,
   },
   {
     productId: "5968897c-4d27-4872-89f6-5bcb052746d7",
@@ -222,16 +224,16 @@ export const products = [
     productName: "Women's Chiffon Beachwear Cover Up - Black",
     rating: {
       stars: 4.5,
-      count: 235
-    },
-    priceInCents: 2070,
-    keywords: [
+      count: 235,
+      keywords: [
       "robe",
       "swimsuit",
       "swimming",
       "bathing",
       "apparel"
     ],
+    },
+    priceInCents: 2070,
     type: "clothing",
     sizeChartLink: "/clothing-size-chart.png"
   },
@@ -241,13 +243,13 @@ export const products = [
     productName: "Round Sunglasses",
     rating: {
       stars: 4.5,
-      count: 30
-    },
-    priceInCents: 1560,
-    keywords: [
+      count: 30,
+      keywords: [
       "accessories",
       "shades"
     ]
+    },
+    priceInCents: 1560,
   },
   {
     productId: "04701903-bc79-49c6-bc11-1af7e3651358",
@@ -255,16 +257,16 @@ export const products = [
     productName: "Women's Two Strap Buckle Sandals - Tan",
     rating: {
       stars: 4.5,
-      count: 562
-    },
-    priceInCents: 2499,
-    keywords: [
+      count: 562,
+      keywords: [
       "footwear",
       "sandals",
       "womens",
       "beach",
       "summer"
     ]
+    },
+    priceInCents: 2499,
   },
   {
     productId: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
@@ -272,14 +274,14 @@ export const products = [
     productName: "Blackout Curtains Set 4-Pack - Beige",
     rating: {
       stars: 4.5,
-      count: 232
-    },
-    priceInCents: 4599,
-    keywords: [
+      count: 232,
+      keywords: [
       "bedroom",
       "curtains",
       "home"
     ]
+    },
+    priceInCents: 4599,
   },
   {
     productId: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
@@ -287,14 +289,14 @@ export const products = [
     productName: "Men's Slim-Fit Summer Shorts",
     rating: {
       stars: 4,
-      count: 160
-    },
-    priceInCents: 1699,
-    keywords: [
+      count: 160,
+      keywords: [
       "shorts",
       "apparel",
       "mens"
     ]
+    },
+    priceInCents: 1699,
   },
   {
     productId: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
@@ -302,14 +304,14 @@ export const products = [
     productName: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
     rating: {
       stars: 5,
-      count: 846
-    },
-    priceInCents: 3074,
-    keywords: [
+      count: 846,
+      keywords: [
       "water boiler",
       "appliances",
       "kitchen"
     ]
+    },
+    priceInCents: 3074,
   },
   {
     productId: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
@@ -317,16 +319,16 @@ export const products = [
     productName: "Ultra Soft Tissue 2-Ply - 18 Box",
     rating: {
       stars: 4,
-      count: 99
-    },
-    priceInCents: 2374,
-    keywords: [
+      count: 99,
+      keywords: [
       "kleenex",
       "tissues",
       "kitchen",
       "tissues box",
       "napkins"
     ]
+    },
+    priceInCents: 2374,
   },
   {
     productId: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
@@ -334,15 +336,15 @@ export const products = [
     productName: "Straw Lifeguard Sun Hat",
     rating: {
       stars: 4,
-      count: 215
-    },
-    priceInCents: 2200,
-    keywords: [
+      count: 215,
+      keywords: [
       "hats",
       "straw hats",
       "summer",
       "apparel"
     ]
+    },
+    priceInCents: 2200,
   },
   {
     productId: "e4f64a65-1377-42bc-89a5-e572d19252e2",
@@ -350,14 +352,14 @@ export const products = [
     productName: "Sterling Silver Sky Flower Stud Earrings",
     rating: {
       stars: 4.5,
-      count: 52
-    },
-    priceInCents: 1799,
-    keywords: [
+      count: 52,
+      keywords: [
       "jewelry",
       "accessories",
       "womens"
     ]
+    },
+    priceInCents: 1799,
   },
   {
     productId: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
@@ -365,16 +367,16 @@ export const products = [
     productName: "Women's Stretch Popover Hoodie",
     rating: {
       stars: 4.5,
-      count: 2465
-    },
-    priceInCents: 1374,
-    keywords: [
+      count: 2465,
+      keywords: [
       "hooded",
       "hoodies",
       "sweaters",
       "womens",
       "apparel"
     ],
+    },
+    priceInCents: 1374,
     type: "clothing",
     sizeChartLink: "/clothing-size-chart.png"
   },
@@ -384,14 +386,14 @@ export const products = [
     productName: "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
     rating: {
       stars: 4.5,
-      count: 119
-    },
-    priceInCents: 1250,
-    keywords: [
+      count: 119,
+      keywords: [
       "bathmat",
       "bathroom",
       "home"
     ]
+    },
+    priceInCents: 1250,
   },
   {
     productId: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
@@ -399,15 +401,15 @@ export const products = [
     productName: "Women's Knit Ballet Flat",
     rating: {
       stars: 4,
-      count: 326
-    },
-    priceInCents: 2640,
-    keywords: [
+      count: 326,
+      keywords: [
       "shoes",
       "flats",
       "womens",
       "footwear"
     ]
+    },
+    priceInCents: 2640,
   },
   {
     productId: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
@@ -415,15 +417,15 @@ export const products = [
     productName: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
     rating: {
       stars: 4.5,
-      count: 2556
-    },
-    priceInCents: 1599,
-    keywords: [
+      count: 2556,
+      keywords: [
       "tshirts",
       "shirts",
       "apparel",
       "mens"
     ],
+    },
+    priceInCents: 1599,
     type: "clothing",
     sizeChartLink: "/clothing-size-chart.png"
   },
@@ -433,15 +435,15 @@ export const products = [
     productName: "Trash Can with Foot Pedal - Brushed Stainless Steel",
     rating: {
       stars: 4.5,
-      count: 2286
-    },
-    priceInCents: 8300,
-    keywords: [
+      count: 2286,
+      keywords: [
       "garbage",
       "bins",
       "cans",
       "kitchen"
     ]
+    },
+    priceInCents: 8300,
   },
   {
     productId: "19c6a64a-5463-4d45-9af8-e41140a4100c",
@@ -449,16 +451,16 @@ export const products = [
     productName: "Duvet Cover Set with Zipper Closure",
     rating: {
       stars: 4,
-      count: 456
-    },
-    priceInCents: 2399,
-    keywords: [
+      count: 456,
+      keywords: [
       "bedroom",
       "bed sheets",
       "sheets",
       "covers",
       "home"
     ]
+    },
+    priceInCents: 2399,
   },
   {
     productId: "d2785924-743d-49b3-8f03-ec258e640503",
@@ -466,10 +468,8 @@ export const products = [
     productName: "Women's Chunky Cable Beanie - Gray",
     rating: {
       stars: 5,
-      count: 83
-    },
-    priceInCents: 1250,
-    keywords: [
+      count: 83,
+      keywords: [
       "hats",
       "winter hats",
       "beanies",
@@ -477,6 +477,8 @@ export const products = [
       "apparel",
       "womens"
     ]
+    },
+    priceInCents: 1250,
   },
   {
     productId: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
@@ -484,14 +486,14 @@ export const products = [
     productName: "Men's Classic-fit Pleated Chino Pants",
     rating: {
       stars: 4.5,
-      count: 9017
-    },
-    priceInCents: 2290,
-    keywords: [
+      count: 9017,
+      keywords: [
       "pants",
       "apparel",
       "mens"
     ]
+    },
+    priceInCents: 2290,
   },
   {
     productId: "1c079479-8586-494f-ab53-219325432536",
@@ -499,15 +501,15 @@ export const products = [
     productName: "Men's Athletic Sneaker",
     rating: {
       stars: 4,
-      count: 229
-    },
-    priceInCents: 3890,
-    keywords: [
+      count: 229,
+      keywords: [
       "shoes",
       "running shoes",
       "footwear",
       "mens"
     ]
+    },
+    priceInCents: 3890,
   },
   {
     productId: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
@@ -515,15 +517,15 @@ export const products = [
     productName: "Men's Navigator Sunglasses Pilot",
     rating: {
       stars: 3.5,
-      count: 42
-    },
-    priceInCents: 1690,
-    keywords: [
+      count: 42,
+      keywords: [
       "sunglasses",
       "glasses",
       "accessories",
       "shades"
     ]
+    },
+    priceInCents: 1690,
   },
   {
     productId: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
@@ -531,13 +533,13 @@ export const products = [
     productName: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
     rating: {
       stars: 4.5,
-      count: 511
-    },
-    priceInCents: 6797,
-    keywords: [
+      count: 511,
+      keywords: [
       "cooking set",
       "kitchen"
     ]
+    },
+    priceInCents: 6797,
   },
   {
     productId: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
@@ -545,15 +547,15 @@ export const products = [
     productName: "Vanity Mirror with Heavy Base - Chrome",
     rating: {
       stars: 4.5,
-      count: 130
-    },
-    priceInCents: 1649,
-    keywords: [
+      count: 130,
+      keywords: [
       "bathroom",
       "washroom",
       "mirrors",
       "home"
     ]
+    },
+    priceInCents: 1649,
   },
   {
     productId: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
@@ -561,16 +563,16 @@ export const products = [
     productName: "Women's Fleece Jogger Sweatpant",
     rating: {
       stars: 4.5,
-      count: 248
-    },
-    priceInCents: 2400,
-    keywords: [
+      count: 248,
+      keywords: [
       "pants",
       "sweatpants",
       "jogging",
       "apparel",
       "womens"
     ]
+    },
+    priceInCents: 2400,
   },
   {
     productId: "d339adf3-e004-4c20-a120-40e8874c66cb",
@@ -578,13 +580,13 @@ export const products = [
     productName: "Double Oval Twist French Wire Earrings - Gold",
     rating: {
       stars: 4.5,
-      count: 117
-    },
-    priceInCents: 2400,
-    keywords: [
+      count: 117,
+      keywords: [
       "accessories",
       "womens"
     ]
+    },
+    priceInCents: 2400,
   },
   {
     productId: "d37a651a-d501-483b-aae6-a9659b0757a0",
@@ -592,14 +594,14 @@ export const products = [
     productName: "Round Airtight Food Storage Containers - 5 Piece",
     rating: {
       stars: 4,
-      count: 126
-    },
-    priceInCents: 2899,
-    keywords: [
+      count: 126,
+      keywords: [
       "boxes",
       "food containers",
       "kitchen"
     ]
+    },
+    priceInCents: 2899,
   },
   {
     productId: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
@@ -607,14 +609,14 @@ export const products = [
     productName: "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
     rating: {
       stars: 4.5,
-      count: 1211
-    },
-    priceInCents: 2250,
-    keywords: [
+      count: 1211,
+      keywords: [
       "coffeemakers",
       "kitchen",
       "appliances"
     ],
+    },
+    priceInCents: 2250,
     type : "appliance",
     warrantyLink : "/appliance-warranty.png"
   },
@@ -624,13 +626,13 @@ export const products = [
     productName: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
     rating: {
       stars: 4.5,
-      count: 363
-    },
-    priceInCents: 3099,
-    keywords: [
+      count: 363,
+      keywords: [
       "bedroom",
       "home"
     ]
+    },
+    priceInCents: 3099,
   },
   {
     productId: "8a53b080-6d40-4a65-ab26-b24ecf700bce",
@@ -638,14 +640,14 @@ export const products = [
     productName: "100% Cotton Bath Towels - 2 Pack, Light Teal",
     rating: {
       stars: 4.5,
-      count: 93
-    },
-    priceInCents: 2110,
-    keywords: [
+      count: 93,
+      keywords: [
       "bathroom",
       "home",
       "towels"
     ]
+    },
+    priceInCents: 2110,
   },
   {
     productId: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
@@ -653,15 +655,15 @@ export const products = [
     productName: "Waterproof Knit Athletic Sneakers - Pink",
     rating: {
       stars: 4,
-      count: 89
-    },
-    priceInCents: 3390,
-    keywords: [
+      count: 89,
+      keywords: [
       "shoes",
       "running shoes",
       "footwear",
       "womens"
     ]
+    },
+    priceInCents: 3390,
   },
   {
     productId: "77a845b1-16ed-4eac-bdf9-5b591882113d",
@@ -669,14 +671,14 @@ export const products = [
     productName: "Countertop Blender - 64oz, 1400 Watts",
     rating: {
       stars: 4,
-      count: 3
-    },
-    priceInCents: 10747,
-    keywords: [
+      count: 3,
+      keywords: [
       "food blenders",
       "kitchen",
       "appliances"
     ],
+    },
+    priceInCents: 10747,
     type : "appliance",
     warrantyLink : "/appliance-warranty.png"
   },
@@ -686,15 +688,15 @@ export const products = [
     productName: "10-Piece Mixing Bowl Set with Lids - Floral",
     rating: {
       stars: 5,
-      count: 679
-    },
-    priceInCents: 3899,
-    keywords: [
+      count: 679,
+      keywords: [
       "mixing bowls",
       "baking",
       "cookware",
       "kitchen"
     ]
+    },
+    priceInCents: 3899,
   },
   {
     productId: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
@@ -702,14 +704,14 @@ export const products = [
     productName: "2-Ply Kitchen Paper Towels - 30 Pack",
     rating: {
       stars: 4.5,
-      count: 1045
-    },
-    priceInCents: 5799,
-    keywords: [
+      count: 1045,
+      keywords: [
       "kitchen",
       "kitchen towels",
       "tissues"
     ]
+    },
+    priceInCents: 5799,
   },
   {
     productId: "bc2847e9-5323-403f-b7cf-57fde044a955",
@@ -717,15 +719,15 @@ export const products = [
     productName: "Men's Full-Zip Hooded Fleece Sweatshirt",
     rating: {
       stars: 4.5,
-      count: 3157
-    },
-    priceInCents: 2400,
-    keywords: [
+      count: 3157,
+      keywords: [
       "sweaters",
       "hoodies",
       "apparel",
       "mens"
     ],
+    },
+    priceInCents: 2400,
     type : "clothing",
     sizeChartLink : "/clothing-size-chart.png"
   }
