@@ -24,7 +24,7 @@ A semi-functional **Amazon clone** built with **HTML, CSS, and JavaScript**, fea
 ## 🛠️ Tech Stack
 - **HTML5**  
 - **CSS3**  
-- **JavaScript (Vanilla)**  
+- **JavaScript**  
 
 ---
 
